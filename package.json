@@ -1,7 +1,7 @@
 {
   "name": "test-gh",
   "version": "0.1.0",
-  "hopepage": "https://viacheslavbocharov.github.io/test-gh",
+  "hopepage": "https://viacheslavbocharov.github.io/test-gh/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
