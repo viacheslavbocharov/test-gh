@@ -1,0 +1,17 @@
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+$c-primary: #ed9902;
+
+:root {
+  --ff: "Rubik", sans-serif;
+  --transition: 0.2s all ease-in-out;
+
+  --c-primary: #ed9902;
+  --c-white: #fff;
+  --c-dark1: #21201e;
+  --c-dark2: #2d2b29;
+  --c-body: #9b968b;
+  --c-linear: #4d4a45;
+}

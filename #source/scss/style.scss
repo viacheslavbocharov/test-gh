@@ -1,0 +1,31 @@
+//Reset and vendors
+@import 'vendors/reset';
+
+//Utils
+@import 'utils/vars';
+@import 'utils/fonts';
+@import 'utils/mixins';
+
+//Latouts
+@import 'layout/base';
+@import 'layout/scroll';
+
+//UI
+
+
+//Global
+@import 'global';
+
+//Components
+@import 'components/header';
+@import 'components/welcome';
+@import 'components/service';
+@import 'components/portfolio';
+@import 'components/customer';
+@import 'components/pricing';
+@import 'components/touch';
+@import 'components/footer';
+
+
+
+//Pages

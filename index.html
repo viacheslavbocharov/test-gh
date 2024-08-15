@@ -1,1 +1,658 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.0baf3905.js"></script><link href="/static/css/main.f855e6bc.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html id="html" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>William K. Portfolio</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <!--header-->
+        <header class="header">
+          <a href="/" class="header__logo">William King<span>.</span></a>
+          <nav class="header__nav">
+            <ul class="header__ul" id="headerUl">
+              <li class="header__li">
+                <a href="/" class="header__a is-active" onclick="navToggle()"
+                  >About</a
+                >
+              </li>
+              <li class="header__li">
+                <a
+                  href="
+                #service"
+                  class="header__a"
+                  onclick="navToggle()"
+                  >Services</a
+                >
+              </li>
+              <li class="header__li">
+                <a href="#portfolio" class="header__a" onclick="navToggle()"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="header__li">
+                <a href="#testimonials" class="header__a" onclick="navToggle()"
+                  >Testimonials</a
+                >
+              </li>
+              <li class="header__li">
+                <a href="#pricing" class="header__a" onclick="navToggle()"
+                  >Pricing</a
+                >
+              </li>
+              <li class="header__li">
+                <a href="#contact" class="header__a" onclick="navToggle()"
+                  >Contact</a
+                >
+              </li>
+              <span class="material-icons icon-close" onclick="navToggle()">
+                close
+              </span>
+            </ul>
+            <span class="header__backdrop" onclick="navToggle()"></span>
+            <span class="material-icons icon-menu" onclick="navToggle()">
+              menu
+            </span>
+          </nav>
+        </header>
+        <!--welcome-->
+        <section class="welcome">
+          <div class="welcome__info">
+            <div class="welcome__title">I'm William&nbsp;K.</div>
+            <div class="welcome__roles">
+              <span>Web Designer</span><small>/</small><span>UI Designer</span
+              ><small>/</small><span>Graphic designer</span>
+            </div>
+            <div class="welcome__desc">
+              Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+              turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+              Morbi risus imperdiet
+            </div>
+            <a href="/" class="welcome__btn btn btn_primary">Explore My Work</a>
+          </div>
+          <div class="welcome__img">
+            <img src="./img/welcome.png" alt="William King" />
+          </div>
+        </section>
+        <!-- breake -->
+        <div class="brake" id="service"></div>
+
+        <!-- servises -->
+        <section class="service">
+          <div class="title">My <span>Services</span></div>
+          <div class="desc">
+            Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis
+            dignissim. Commodo pellentesque tristique aliquet turpis. Morbi
+            risus imperdiet
+          </div>
+          <div class="service__list">
+            <div class="service-item">
+              <div class="service-item__img">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                >
+                  <path
+                    d="M38.0725 32.9283V31.3658V32.9283ZM44.6129 24.5641L43.0851 24.8915L43.0851 24.8915L44.6129 24.5641ZM44.636 24.6715L46.1638 24.3441L46.1638 24.344L44.636 24.6715ZM44.636 27.6113L43.1082 27.2839V27.2839L44.636 27.6113ZM38.182 19.3545V17.792V19.3545ZM36.0413 32.9283L34.5289 32.5356L34.0212 34.4908H36.0413V32.9283ZM37.3309 19.3545V17.792H35.664L35.7716 19.4553L37.3309 19.3545ZM38.0725 31.3658H37.0539V34.4908H38.0725V31.3658ZM43.0851 24.8915L43.1082 24.9989L46.1638 24.344L46.1408 24.2367L43.0851 24.8915ZM43.1082 24.9989C43.2695 25.752 43.2695 26.5308 43.1082 27.2839L46.1638 27.9387C46.4177 26.754 46.4177 25.5288 46.1638 24.3441L43.1082 24.9989ZM38.0725 34.4908C41.9762 34.4908 45.3452 31.7582 46.1638 27.9387L43.1082 27.2839C42.5972 29.6679 40.4971 31.3658 38.0725 31.3658V34.4908ZM38.182 20.917C40.5428 20.917 42.5876 22.5702 43.0851 24.8915L46.1408 24.2367C45.3356 20.4799 42.0218 17.792 38.182 17.792V20.917ZM37.0539 31.3658H36.0413V34.4908H37.0539V31.3658ZM35.7716 19.4553C36.0561 23.8534 35.6367 28.2695 34.5289 32.5356L37.5536 33.321C38.745 28.7329 39.196 23.9835 38.8901 19.2536L35.7716 19.4553ZM38.182 17.792H37.3309V20.917H38.182V17.792Z"
+                    fill="#ED9902"
+                  />
+                  <path
+                    d="M15.153 6.71384L14.917 5.16926L15.153 6.71384ZM27.3664 6.71384L27.6024 5.16926L27.3664 6.71384ZM26.7371 43.2676L27.0102 44.806L26.7371 43.2676ZM15.7823 43.2676L16.0554 41.7291L16.0554 41.7291L15.7823 43.2676ZM7.39353 36.0438L8.88653 35.583L7.39353 36.0438ZM5.54062 15.8465L3.98869 15.6651L5.54062 15.8465ZM37.1299 17.1394L35.5779 17.3208V17.3208L37.1299 17.1394ZM35.5097 34.8002L34.0167 34.3394L34.0167 34.3394L35.5097 34.8002ZM5.6161 15.2007L7.16804 15.3821L5.6161 15.2007ZM13.5581 6.95752L13.7941 8.5021L13.5581 6.95752ZM15.503 43.218L15.2298 44.7564H15.2298L15.503 43.218ZM35.2097 35.7721L36.7027 36.2329V36.2329L35.2097 35.7721ZM36.9562 15.6535L38.5081 15.4721V15.4721L36.9562 15.6535ZM28.5118 6.88885L28.2759 8.43343L28.5118 6.88885ZM36.0412 32.9284L34.5289 32.5357L36.0412 32.9284ZM37.3308 19.3546L35.7716 19.4555L37.3308 19.3546ZM35.4043 15.8349L35.5779 17.3208L38.6818 16.958L38.5081 15.4721L35.4043 15.8349ZM34.0167 34.3394L33.7167 35.3113L36.7027 36.2329L37.0027 35.261L34.0167 34.3394ZM7.09256 16.0279L7.16804 15.3821L4.06417 15.0193L3.98869 15.6651L7.09256 16.0279ZM16.0554 41.7291L15.7761 41.6795L15.2298 44.7564L15.5092 44.806L16.0554 41.7291ZM13.7941 8.5021L15.389 8.25841L14.917 5.16926L13.3221 5.41294L13.7941 8.5021ZM27.1304 8.25842L28.2759 8.43343L28.7478 5.34428L27.6024 5.16926L27.1304 8.25842ZM15.389 8.25841C19.2803 7.66386 23.239 7.66386 27.1304 8.25842L27.6024 5.16926C23.3982 4.52691 19.1212 4.52691 14.917 5.16926L15.389 8.25841ZM26.464 41.7291C23.0212 42.3403 19.4981 42.3403 16.0554 41.7291L15.5091 44.806C19.3132 45.4813 23.2061 45.4813 27.0102 44.806L26.464 41.7291ZM8.88653 35.583C6.93547 29.2614 6.32438 22.6004 7.09256 16.0279L3.98869 15.6651C3.17007 22.6692 3.82126 29.7676 5.90052 36.5046L8.88653 35.583ZM7.16804 15.3821C7.58073 11.8511 10.2956 9.03662 13.7941 8.5021L13.3221 5.41294C8.42747 6.16078 4.63963 10.0957 4.06417 15.0193L7.16804 15.3821ZM5.90052 36.5046C7.22244 40.7877 10.8219 43.9739 15.2298 44.7564L15.7761 41.6795C12.5243 41.1022 9.8642 38.7507 8.88653 35.583L5.90052 36.5046ZM33.7167 35.3113C32.6875 38.6459 29.8872 41.1214 26.464 41.7291L27.0102 44.806C31.5897 43.993 35.3293 40.6829 36.7027 36.2329L33.7167 35.3113ZM38.5081 15.4721C37.9014 10.281 33.9079 6.13268 28.7478 5.34428L28.2759 8.43343C32.0398 9.00852 34.9603 12.0364 35.4043 15.8349L38.5081 15.4721ZM34.5289 32.5357C34.3719 33.1401 34.2012 33.7415 34.0167 34.3394L37.0027 35.261C37.2011 34.6179 37.3848 33.9712 37.5536 33.3211L34.5289 32.5357ZM35.5779 17.3208C35.661 18.0314 35.7255 18.7432 35.7716 19.4555L38.8901 19.2538C38.8405 18.4878 38.7711 17.7223 38.6818 16.958L35.5779 17.3208ZM35.7716 19.4555C36.056 23.8535 35.6367 28.2696 34.5289 32.5357L37.5536 33.3211C38.745 28.733 39.196 23.9836 38.8901 19.2538L35.7716 19.4555Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M12.5 23.9584V25.5499C12.5 28.6134 13.2133 31.6349 14.5833 34.375"
+                    stroke="#ED9902"
+                    stroke-width="3.125"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="service-item__info">
+                <div class="service-item__title">Service title</div>
+                <div class="service-item__desc">
+                  Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                  turpis dignissim. Commodo pellentesque tristique aliquet
+                  turpis. Morbi risus imperdiet
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__img">
+                <img src="./img/shield-check.svg" alt="icon" />
+              </div>
+              <div class="service-item__info">
+                <div class="service-item__title">Service title</div>
+                <div class="service-item__desc">
+                  Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                  turpis dignissim. Commodo pellentesque tristique aliquet
+                  turpis. Morbi risus imperdiet
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__img">
+                <img src="./img/menu.svg" alt="icon" />
+              </div>
+              <div class="service-item__info">
+                <div class="service-item__title">Service title</div>
+                <div class="service-item__desc">
+                  Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                  turpis dignissim. Commodo pellentesque tristique aliquet
+                  turpis. Morbi risus imperdiet
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__img">
+                <img src="./img/send.svg" alt="icon" />
+              </div>
+              <div class="service-item__info">
+                <div class="service-item__title">Service title</div>
+                <div class="service-item__desc">
+                  Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                  turpis dignissim. Commodo pellentesque tristique aliquet
+                  turpis. Morbi risus imperdiet
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__img">
+                <img src="./img/setting.svg" alt="icon" />
+              </div>
+              <div class="service-item__info">
+                <div class="service-item__title">Service title</div>
+                <div class="service-item__desc">
+                  Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                  turpis dignissim. Commodo pellentesque tristique aliquet
+                  turpis. Morbi risus imperdiet
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item__img">
+                <img src="./img/headphone.svg" alt="icon" />
+              </div>
+              <div class="service-item__info">
+                <div class="service-item__title">Service title</div>
+                <div class="service-item__desc">
+                  Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                  turpis dignissim. Commodo pellentesque tristique aliquet
+                  turpis. Morbi risus imperdiet
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- breake -->
+        <div class="brake" id="portfolio"></div>
+
+        <!-- portfolio -->
+        <section class="portfolio">
+          <div class="title">My <span>Portfolio</span></div>
+          <div class="desc">
+            Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis
+            dignissim. Commodo pellentesque tristique aliquet turpis. Morbi
+            risus imperdiet
+          </div>
+          <div class="portfolio__list">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="./img/portfolio-item.png" alt="portfolio-item.png" />
+              </div>
+              <a href="/" class="portfolio-item__search">
+                <img src="./img/search.svg" alt="search" />
+              </a>
+            </div>
+
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img
+                  src="./img/portfolio-item-1.png"
+                  alt="portfolio-item.png"
+                />
+              </div>
+              <a href="/" class="portfolio-item__search">
+                <img src="./img/search.svg" alt="search" />
+              </a>
+            </div>
+
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img
+                  src="./img/portfolio-item-2.png"
+                  alt="portfolio-item.png"
+                />
+              </div>
+              <a href="/" class="portfolio-item__search">
+                <img src="./img/search.svg" alt="search" />
+              </a>
+            </div>
+
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img
+                  src="./img/portfolio-item-3.png"
+                  alt="portfolio-item.png"
+                />
+              </div>
+              <a href="/" class="portfolio-item__search">
+                <img src="./img/search.svg" alt="search" />
+              </a>
+            </div>
+
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img
+                  src="./img/portfolio-item-4.png"
+                  alt="portfolio-item.png"
+                />
+              </div>
+              <a href="/" class="portfolio-item__search">
+                <img src="./img/search.svg" alt="search" />
+              </a>
+            </div>
+
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img
+                  src="./img/portfolio-item-5.png"
+                  alt="portfolio-item.png"
+                />
+              </div>
+              <a href="/" class="portfolio-item__search">
+                <img src="./img/search.svg" alt="search" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Slider main container -->
+          <div class="image-slider swiper">
+            <!-- Additional required wrapper -->
+            <div class="image-slider__wrapper swiper-wrapper">
+              <!-- Slides -->
+              <div class="image-slider__slide swiper-slide">
+                <div class="portfolio-item">
+                  <div class="portfolio-item__img portfolio-item__img_slider">
+                    <img src="./img/portfolio-item.png" alt="portfolio-item.png" />
+                  </div>
+                  <a href="/" class="portfolio-item__search">
+                    <img src="./img/search.svg" alt="search" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="image-slider__slide swiper-slide">
+                <div class="portfolio-item">
+                  <div class="portfolio-item__img portfolio-item__img_slider">
+                    <img src="./img/portfolio-item-1.png" alt="portfolio-item.png" />
+                  </div>
+                  <a href="/" class="portfolio-item__search">
+                    <img src="./img/search.svg" alt="search" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="image-slider__slide swiper-slide">
+                <div class="portfolio-item">
+                  <div class="portfolio-item__img portfolio-item__img_slider">
+                    <img src="./img/portfolio-item-2.png" alt="portfolio-item.png" />
+                  </div>
+                  <a href="/" class="portfolio-item__search">
+                    <img src="./img/search.svg" alt="search" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="image-slider__slide swiper-slide">
+                <div class="portfolio-item">
+                  <div class="portfolio-item__img portfolio-item__img_slider">
+                    <img src="./img/portfolio-item-3.png" alt="portfolio-item.png" />
+                  </div>
+                  <a href="/" class="portfolio-item__search">
+                    <img src="./img/search.svg" alt="search" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="image-slider__slide swiper-slide">
+                <div class="portfolio-item">
+                  <div class="portfolio-item__img portfolio-item__img_slider">
+                    <img src="./img/portfolio-item-4.png" alt="portfolio-item.png" />
+                  </div>
+                  <a href="/" class="portfolio-item__search">
+                    <img src="./img/search.svg" alt="search" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="image-slider__slide swiper-slide">
+                <div class="portfolio-item">
+                  <div class="portfolio-item__img portfolio-item__img_slider">
+                    <img src="./img/portfolio-item-5.png" alt="portfolio-item.png" />
+                  </div>
+                  <a href="/" class="portfolio-item__search">
+                    <img src="./img/search.svg" alt="search" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!--<div class="swiper-scrollbar"></div>-->
+          </div>
+        </section>
+
+        <!-- breake -->
+        <div class="brake" id="testimonials"></div>
+
+        <!-- customers -->
+        <section class="customer">
+          <div class="title">Listen to my <span>customers</span></div>
+          <div class="desc">
+            Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis
+            dignissim. Commodo pellentesque tristique aliquet turpis. Morbi
+            risus imperdiet
+          </div>
+          <div class="customer__list">
+            <div class="customer-item">
+              <div class="customer-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <div class="customer-item__role-container">
+                <div class="customer-item__img">
+                  <img src="./img/photo1.png" alt="pole" />
+                </div>
+                <div class="customer-item__role-desc-container">
+                  <div class="customer-item__role-name">Leslie Alexander</div>
+                  <div class="customer-item__role">Dog Trainer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="customer-item">
+              <div class="customer-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <div class="customer-item__role-container">
+                <div class="customer-item__img">
+                  <img src="./img/photo2.png" alt="pole" />
+                </div>
+                <div class="customer-item__role-desc-container">
+                  <div class="customer-item__role-name">Guy Hawkins</div>
+                  <div class="customer-item__role">Web Designer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="customer-item">
+              <div class="customer-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <div class="customer-item__role-container">
+                <div class="customer-item__img">
+                  <img src="./img/photo3.png" alt="pole" />
+                </div>
+                <div class="customer-item__role-desc-container">
+                  <div class="customer-item__role-name">Devon Lane</div>
+                  <div class="customer-item__role">Medical Assistant</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="customer-item">
+              <div class="customer-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <div class="customer-item__role-container">
+                <div class="customer-item__img">
+                  <img src="./img/photo4.png" alt="pole" />
+                </div>
+                <div class="customer-item__role-desc-container">
+                  <div class="customer-item__role-name">Floyd Miles</div>
+                  <div class="customer-item__role">Marketing Coordinator</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- breake -->
+        <div class="brake" id="pricing"></div>
+
+        <!-- pricing -->
+        <section class="pricing">
+          <div class="title">My <span>Pricing</span></div>
+          <div class="desc">
+            Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis
+            dignissim. Commodo pellentesque tristique aliquet turpis. Morbi
+            risus imperdiet
+          </div>
+          <div class="pricing__list">
+            <div class="pricing-item">
+              <div class="pricing-item__title">Silver</div>
+              <div class="pricing-item__price">$99.0</div>
+              <div class="pricing-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <a href="/" class="pricing__btn btn btn_secondary">Get Started</a>
+              <div class="pricing-item__container">
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-item">
+              <div class="pricing-item__title">Silver</div>
+              <div class="pricing-item__price">$99.0</div>
+              <div class="pricing-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <a href="/" class="pricing__btn btn btn_primary">Get Started</a>
+              <div class="pricing-item__container">
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-item">
+              <div class="pricing-item__title">Silver</div>
+              <div class="pricing-item__price">$99.0</div>
+              <div class="pricing-item__desc">
+                Rutrum cursus varius ullamcorper venenatis faucibus lobortis
+                turpis dignissim. Commodo pellentesque tristique aliquet turpis.
+                Morbi risus imperdiet
+              </div>
+              <a href="/" class="pricing__btn btn btn_secondary">Get Started</a>
+              <div class="pricing-item__container">
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+                <div class="pricing-item__point-container">
+                  <div class="pricing-item__point">
+                    <img src="./img/ceheck.svg" alt="Cheked" />
+                  </div>
+                  <div class="pricing-item__point-desc">12 GB Free space</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- breake -->
+        <div class="brake" id="contact"></div>
+
+        <!-- touch -->
+        <section class="touch">
+          <div class="title">Get <span>in touch</span></div>
+          <div class="desc">
+            Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis
+            dignissim. Commodo pellentesque tristique aliquet turpis. Morbi
+            risus imperdiet
+          </div>
+          <form class="form">
+            <input
+              type="text"
+              class="name"
+              name="username"
+              placeholder="Enter Your Name"
+            />
+            <input
+              type="text"
+              class="email"
+              name="email"
+              placeholder="Enter Your Email Address"
+            />
+            <textarea class="textarea" placeholder="Enter Message"></textarea>
+            <button class="form__btn btn btn_primary" type="submit">
+              Send Message
+            </button>
+          </form>
+        </section>
+      </div>
+      <!-- footer -->
+      <div class="footer-wrapper">
+        <footer class="footer container">
+          <div class="footer__container">
+            <div class="footer__text">
+              © 2020 All rights reserved. Designed by <span>SA7MAN.</span>
+            </div>
+            <div class="footer__socials-container">
+              <a href="/" class="footer__social">Twitter</a>
+              <a href="/" class="footer__social">Dribbble</a>
+              <a href="/" class="footer__social">Github</a>
+              <a href="/" class="footer__social">Instagram</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
